@@ -34,22 +34,10 @@ public class LionTest {
     public void constructorLionException() {
         try {
             new Lion(feline, "Самей");
+            fail("Expected exception was not thrown");
         } catch (Exception exception) {
-            System.out.println(exception);
+            assertNotNull(exception);
         }
     }
 
-    @Test
-    public void doesHaveManeTrue() throws Exception {
-        Lion lion = new Lion(feline, "Самец");
-        boolean actual = lion.doesHaveMane();
-        assertTrue(actual);
-    }
-
-    @Test
-    public void doesHaveManeFalse() throws Exception {
-        Lion lion = new Lion(feline, "Самка");
-        boolean actual = lion.doesHaveMane();
-        assertFalse(actual);
-    }
 }

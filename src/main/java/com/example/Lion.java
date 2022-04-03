@@ -6,11 +6,10 @@ public class Lion {
 
     boolean hasMane;
     Feline feline;
-    String sex;
+
 
     public Lion(Feline feline, String sex) throws Exception {
         this.feline = feline;
-        this.sex = sex;
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -22,7 +21,6 @@ public class Lion {
 
     public Lion(Feline feline) {
         this.feline = feline;
-        sex = "Самец";
         hasMane = true;
     }
 

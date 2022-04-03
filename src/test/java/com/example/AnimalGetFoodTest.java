@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class AnimalGetFoodTest {
 
@@ -27,8 +27,9 @@ public class AnimalGetFoodTest {
     public void getFoodException() {
         try {
             animal.getFood("Млекопитающее");
+            fail("Expected exception was not thrown");
         } catch (Exception exception) {
-            System.out.println(exception);
+            assertNotNull(exception);
         }
     }
 }

@@ -16,7 +16,7 @@ public class FelineCountKittensParamTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters // добавили аннотацию
+    @Parameterized.Parameters
     public static Object[][] getKittensCount() {
         return new Object[][] {
                 { 1, 1},
